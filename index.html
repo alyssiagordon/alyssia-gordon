@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alyssia Gordon - Technology Strategy & Operations Leader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #2D3748;
+            --secondary: #4A5568;
+            --accent: #FF8A80;
+            --teal: #0F766E;
+            --light: #F7FAFC;
+            --white: #FFFFFF;
+            --border: #E2E8F0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--primary);
+            background: var(--white);
+            scroll-behavior: smooth;
+        }
+        
+        /* Navigation */
+        nav {
+            background: var(--accent);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 0 20px;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4em;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+            font-size: 0.95em;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: var(--white);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0B5C55 0%, #0F766E 100%);
+            color: white;
+            padding: 80px 20px 60px;
+        }
+        
+        .hero-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero-photo-container {
+            flex-shrink: 0;
+            text-align: center;
+        }
+        
+        .hero-photo {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid rgba(255,255,255,0.2);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        
+        .location-info {
+            margin-top: 15px;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .location-info p {
+            margin: 5px 0;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+        
+        .hero .tagline {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.1em;
+            margin-bottom: 35px;
+            opacity: 0.85;
+            line-height: 1.7;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #FF7469;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 138, 128, 0.3);
+        }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.15);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.25);
+            border-color: rgba(255,255,255,0.5);
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--accent);
+            color: white;
+            padding: 30px 20px;
+        }
+        
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 10px;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.95em;
+            opacity: 0.95;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        .section-header p {
+            font-size: 1.2em;
+            color: var(--secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .about-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: var(--secondary);
+        }
+        
+        .about-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .spacer {
+            flex: 1;
+        }
+        
+        .ai-credit {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: var(--secondary);
+            font-style: italic;
+            opacity: 0.7;
+        }
+        
+        .value-props {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .value-item {
+            background: var(--light);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--teal);
+        }
+        
+        .value-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .value-item p {
+            color: var(--secondary);
+            line-height: 1.7;
+            margin: 0;
+        }
+        
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-category {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+        }
+        
+        .skill-category h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+        
+        .skill-category .icon {
+            font-size: 1.5em;
+        }
+        
+        .skill-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .skill-item {
+            font-size: 1em;
+            color: var(--secondary);
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .skill-item:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+            font-weight: bold;
+        }
+        
+        /* Experience Timeline */
+        .timeline-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--border);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 80px;
+            margin-bottom: 50px;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 21px;
+            top: 15px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--teal);
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px var(--border);
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+        }
+        
+        .timeline-date {
+            font-weight: 600;
+            color: var(--accent);
+            font-size: 0.95em;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .timeline-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6em;
+            margin-bottom: 5px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        .timeline-content .company {
+            color: var(--teal);
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: block;
+            font-size: 1.05em;
+        }
+        
+        .timeline-content ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        
+        .timeline-content li {
+            margin-bottom: 10px;
+            color: var(--secondary);
+            line-height: 1.7;
+        }
+        
+        /* Case Studies */
+        .case-studies {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .case-study {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .case-study-header {
+            background: linear-gradient(135deg, #0B5C55 0%, #0F766E 100%);
+            color: white;
+            padding: 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        
+        .case-study-header:hover {
+            background: linear-gradient(135deg, #0F766E 0%, #0B5C55 100%);
+        }
+        
+        .case-study-header-content {
+            flex: 1;
+        }
+        
+        .case-study-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .case-study-header .meta {
+            display: flex;
+            gap: 20px;
+            font-size: 0.95em;
+            opacity: 0.9;
+            flex-wrap: wrap;
+        }
+        
+        .case-study-toggle {
+            font-size: 2em;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+        
+        .case-study.expanded .case-study-toggle {
+            transform: rotate(180deg);
+        }
+        
+        .case-study-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .case-study.expanded .case-study-body {
+            max-height: 2000px;
+        }
+        
+        .case-study-body-content {
+            padding: 30px;
+        }
+        
+        .case-challenge,
+        .case-solution,
+        .case-impact {
+            margin-bottom: 25px;
+        }
+        
+        .case-challenge h4,
+        .case-solution h4,
+        .case-impact h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--teal);
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .case-challenge p,
+        .case-solution p {
+            color: var(--secondary);
+            line-height: 1.8;
+        }
+        
+        .impact-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .metric {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            font-size: 0.9em;
+            color: var(--secondary);
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: var(--light);
+            text-align: center;
+        }
+        
+        .contact-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .contact-email-display {
+            margin-top: 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .contact-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--accent);
+                flex-direction: column;
+                gap: 0;
+                padding: 0;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            
+            .nav-links.active {
+                max-height: 400px;
+            }
+            
+            .nav-links a {
+                padding: 15px 20px;
+                display: block;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .hero h1 {
+                font-size: 2.2em;
+            }
+            
+            .hero .tagline {
+                font-size: 1.2em;
+            }
+            
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 40px;
+            }
+            
+            .hero-photo {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+.stats-container {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .case-study-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .case-study-toggle {
+                align-self: flex-end;
+            }
+            
+            .timeline-item {
+                padding-left: 60px;
+            }
+            
+            .timeline-line {
+                left: 20px;
+            }
+            
+            .timeline-dot {
+                left: 11px;
+            }
+            
+            .section-header h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Alyssia Gordon</a>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Alyssia Gordon</h1>
+                <p class="tagline">Turning vision into reality through flawless execution.</p>
+                <p class="subtitle">Technology Strategy & Operations leader with 13 years turning ambitious tech investments into measurable business outcomes for Retail and Consumer Goods companies.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-photo-container">
+                <img src="headshot.jpg" alt="Alyssia Gordon" class="hero-photo" id="heroPhoto">
+                <div class="location-info">
+                    <p>📍 San Francisco, CA</p>
+                    <p style="font-size: 0.85em; opacity: 0.8;">✓ Authorised to work in the US</p>
+                    <p style="font-size: 0.85em; opacity: 0.8;">Open to on-site, hybrid, or remote</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-number">13</span>
+                <span class="stat-label">Years in Tech Consulting</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">$15M+</span>
+                <span class="stat-label">Programmes Led</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">200+</span>
+                <span class="stat-label">Team Members Managed</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">3,000+</span>
+                <span class="stat-label">Global Users Impacted</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <h2>Why I'm Different</h2>
+            <p>Most people focus on strategy OR execution. I bridge the gap between C-suite vision and delivery reality.</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>From Consulting to In-House Impact</h3>
+                <p>After 13 years leading transformations for companies like Harrods, Diageo, and Sainsbury's, I've learned that most organisations don't struggle with strategy - they struggle with execution.</p>
+                <p>I've built my career solving that problem: translating C-suite vision into operational reality, using data to expose blockers before they become crises, and building the frameworks that empower teams to deliver on time and on budget.</p>
+                <p>Now I'm ready to bring this expertise in-house to a Retail, Consumer Goods, or scaling Technology company that needs someone who can turn strategy into realistic, deliverable plans that organise cross-functional teams and drive measurable commercial results.</p>
+                <div class="spacer"></div>
+                <div class="value-item">
+                    <h4>🤖 AI-Augmented Leadership</h4>
+                    <p>I bring human insight enhanced by cutting-edge AI tools - amplifying productivity and freeing myself and my teams up for high-value, connecting-the-dots work.</p>
+                </div>
+            </div>
+            <div class="value-props">
+                <div class="value-item">
+                    <h4>🎯 Strategy → Execution Bridge</h4>
+                    <p>I translate executive visions into prioritised technical roadmaps and build the operational rigour to deliver them.</p>
+                </div>
+                <div class="value-item">
+                    <h4>📊 Data-Driven Problem Solving</h4>
+                    <p>I build dashboards that tell the right stories - reducing critical path delays by 80% by exposing hidden blockers and putting actions in the correct hands.</p>
+                </div>
+                <div class="value-item">
+                    <h4>🚀 0→1 Builder</h4>
+                    <p>I've set up 200+ person teams from scratch, establishing operating models and launching programmes 4 weeks ahead of schedule.</p>
+                </div>
+                <div class="value-item">
+                    <h4>🤝 Trusted Advisor</h4>
+                    <p>I partner with C-suite leadership to shape strategy, influence decisions, and deliver challenging news with clarity and trust.</p>
+                </div>
+            </div>
+        </div>
+        <p class="ai-credit">✨ Website built in collaboration with Claude</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-header">
+            <h2>Core Capabilities</h2>
+            <p>The skills I bring to Chief of Staff, Strategy, and Operations roles</p>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3><span class="icon">🎯</span> Strategic Leadership</h3>
+                <div class="skill-list">
+                    <div class="skill-item">Business case development & opportunity sizing</div>
+                    <div class="skill-item">Strategic problem structuring & root cause analysis</div>
+                    <div class="skill-item">IT financial & strategic planning (AOP/LRP)</div>
+                    <div class="skill-item">C-suite stakeholder management & influence</div>
+                    <div class="skill-item">Executive communications & messaging</div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3><span class="icon">⚙️</span> Operational Excellence</h3>
+                <div class="skill-list">
+                    <div class="skill-item">0→1 programme setup & operating models</div>
+                    <div class="skill-item">Financial management ($15m+ programmes)</div>
+                    <div class="skill-item">Cross-functional execution leadership</div>
+                    <div class="skill-item">Risk & blocker resolution</div>
+                    <div class="skill-item">Ruthless organisation & prioritisation</div>
+                    <div class="skill-item">Process improvement & efficiency gains</div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3><span class="icon">📊</span> Data & Analytics</h3>
+                <div class="skill-list">
+                    <div class="skill-item">Analytics roadmap & architecture strategy</div>
+                    <div class="skill-item">Dashboard & KPI design for executives</div>
+                    <div class="skill-item">Data-driven problem solving</div>
+                    <div class="skill-item">Performance frameworks & metrics</div>
+                    <div class="skill-item">Fluent in GenAI tools (Claude, ChatGPT, Copilot)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" style="background: var(--light);">
+        <div class="section-header">
+            <h2>Career Journey</h2>
+            <p>13 years transforming technology strategy into business outcomes</p>
+        </div>
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2017 – Present</span>
+                    <h3>Senior Manager, Technology Consulting</h3>
+                    <span class="company">Accenture</span>
+                    <ul>
+                        <li>Built business case and multi-year roadmap for $15m ERP modernisation programme for luxury British department store</li>
+                        <li>Led 0→1 setup for 10 workstream, 200+ person team, launching programme 4 weeks early with streamlined processes</li>
+                        <li>Developed Reporting & Analytics strategy for $80m programme including hybrid architecture and tooling recommendations</li>
+                        <li>Built dashboard for $130m programme that reduced delays from 15 days → 3 days</li>
+                        <li>Led cross-functional teams to deliver 4 reporting solutions to 3,000+ global users</li>
+                        <li>Trusted advisor presenting directly to CEO, CIO, and CFO</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2016 – 2017</span>
+                    <h3>Head of Data Visualisation</h3>
+                    <span class="company">D4t4 Solutions Plc</span>
+                    <ul>
+                        <li>Designed and built customer insight dashboards for international automotive brand</li>
+                        <li>Embedded dashboards in BAU processes, used to benchmark Sales Team bonuses</li>
+                        <li>Presented at Board level, winning $130k in additional work</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2013 – 2016</span>
+                    <h3>Technology Consulting</h3>
+                    <span class="company">PwC</span>
+                    <ul>
+                        <li>Led agile development of dashboards tracking global trading and commercial performance</li>
+                        <li>Developed deep understanding of key commercial performance drivers across Retail</li>
+                        <li>Created national Retail benchmarking framework with 45+ criteria</li>
+                        <li>Facilitated requirements workshops with senior stakeholders</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2009 – 2012</span>
+                    <h3>BSc (Hons) Economic History</h3>
+                    <span class="company">London School of Economics</span>
+                    <ul>
+                        <li>Equivalent 3.7 GPA</li>
+                        <li>Foundation in analytical thinking and using data for storytelling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section id="case-studies">
+        <div class="section-header">
+            <h2>Impact In Action</h2>
+            <p>Click to expand and see the details of each project</p>
+        </div>
+        <div class="case-studies">
+            <div class="case-study" onclick="toggleCaseStudy(this)">
+                <div class="case-study-header">
+                    <div class="case-study-header-content">
+                        <h3>Luxury Retail ERP Transformation</h3>
+                        <div class="meta">
+                            <span>📍 Luxury British Department Store</span>
+                            <span>💰 $15M Programme Value</span>
+                            <span>👤 200+ Team Members</span>
+                        </div>
+                    </div>
+                    <div class="case-study-toggle">▼</div>
+                </div>
+                <div class="case-study-body">
+                    <div class="case-study-body-content">
+                        <div class="case-challenge">
+                            <h4>The Challenge</h4>
+                            <p>Client was looking to invest in a business transformation to future-proof them for the next 100 years. Their priorities were to standardise their processes, upgrade their technology stack and join disparate systems to enable leading data insights with near-zero downtime while maintaining operations.</p>
+                        </div>
+                        <div class="case-solution">
+                            <h4>My Approach</h4>
+                            <p>Developed a winning business case to modernise their ERP from ECC to SAP S/4HANA, identifying 180+ challenges and 80+ opportunities across both process and Tech. Designed a phased go-live approach to reduce risk to operations and provide value to the business early. Led 0→1 programme setup establishing operating models, governance, and lightweight processes for a 10 workstream, 200+ person team. Developed and owned the dependencies in the 18-month delivery plan as Delivery Lead, also leading all programme rhythms and operations.</p>
+                        </div>
+                        <div class="case-impact">
+                            <h4>The Impact</h4>
+                            <div class="impact-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">$15M</span>
+                                    <span class="metric-label">Programme Won</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">4 Weeks</span>
+                                    <span class="metric-label">Launched Early</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">200+</span>
+                                    <span class="metric-label">Team Built</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">18 Month</span>
+                                    <span class="metric-label">Programme Plan Delivered</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study" onclick="toggleCaseStudy(this)">
+                <div class="case-study-header">
+                    <div class="case-study-header-content">
+                        <h3>Data Migration Turnaround</h3>
+                        <div class="meta">
+                            <span>📍 Multinational Consumer Goods</span>
+                            <span>💰 $130M Programme</span>
+                            <span>👤 60 Team Members</span>
+                        </div>
+                    </div>
+                    <div class="case-study-toggle">▼</div>
+                </div>
+                <div class="case-study-body">
+                    <div class="case-study-body-content">
+                        <div class="case-challenge">
+                            <h4>The Challenge</h4>
+                            <p>High-profile $130m programme experiencing severe delays in the Data Migration workstream. Delays averaging 15-days on critical path, threatening overall programme timeline. Lack of visibility into root causes and blockers.</p>
+                        </div>
+                        <div class="case-solution">
+                            <h4>My Approach</h4>
+                            <p>Brought in by leadership to embed structured C-suite reporting. Built dashboards exposing hidden blockers, overdue actions with respective owners, and time elapsed for resolution. Created accountability through visibility and reduced delays to average of 3 days.</p>
+                        </div>
+                        <div class="case-impact">
+                            <h4>The Impact</h4>
+                            <div class="impact-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">80%</span>
+                                    <span class="metric-label">Delay Reduction</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">15→3</span>
+                                    <span class="metric-label">Days on Critical Path</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">60</span>
+                                    <span class="metric-label">Resources Managed</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">On Time</span>
+                                    <span class="metric-label">Go-Live</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study" onclick="toggleCaseStudy(this)">
+                <div class="case-study-header">
+                    <div class="case-study-header-content">
+                        <h3>Food Trends Analytics Platform</h3>
+                        <div class="meta">
+                            <span>📍 UK National Grocer</span>
+                            <span>💰 $4.5M Programme</span>
+                            <span>👤 30+ Team Members</span>
+                        </div>
+                    </div>
+                    <div class="case-study-toggle">▼</div>
+                </div>
+                <div class="case-study-body">
+                    <div class="case-study-body-content">
+                        <div class="case-challenge">
+                            <h4>The Challenge</h4>
+                            <p>Client needed data-led insights and a single source of truth for product launch business cases. Product Developers relied on gut instinct rather than facts, not able to quantify demand or value of potential new products.</p>
+                        </div>
+                        <div class="case-solution">
+                            <h4>My Approach</h4>
+                            <p>Led international team of 30+ building custom 'food trends' analytics tool on Google Cloud using bespoke algorithms and LLMs on scraped social media data. Owned end-to-end delivery across data engineering, data science, product design, and testing. Coordinated cross-functional operations in an Agile environment to identify emerging food trends ahead of competitors.</p>
+                        </div>
+                        <div class="case-impact">
+                            <h4>The Impact</h4>
+                            <div class="impact-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">$4.5M</span>
+                                    <span class="metric-label">Programme Delivered</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">Millions</span>
+                                    <span class="metric-label">Data Points Used</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">1000s</span>
+                                    <span class="metric-label">Trends Identified</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">10s</span>
+                                    <span class="metric-label">New Products Launched</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2>Let's Talk</h2>
+            <p>Looking for a Chief of Staff, Strategy, or Operations leader who can turn your technology investments into measurable business outcomes? I'd love to hear about your challenges.</p>
+            </div>
+        <div class="contact-content">
+            <div class="contact-links">
+                <a href="mailto:alyssia_gordon@hotmail.com" class="contact-link">
+                    <span>✉️</span>
+                    <span>alyssia_gordon@hotmail.com</span>
+                </a>
+                <a href="tel:+14158348520" class="contact-link">
+                    <span>📱</span>
+                    <span>(415) 834-8520</span>
+                </a>
+                <a href="https://www.linkedin.com/in/alyssia-g-90143040/" class="contact-link" target="_blank">
+                    <span>💼</span>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            <p style="margin-top: 40px; color: var(--secondary);">
+                📍 Based in San Francisco, CA<br>
+                ✓ Authorised to work in the US • Open to on-site, hybrid, or remote
+            </p>
+        </div>
+    </section>
+    
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+        
+        // Case Study Toggle
+        function toggleCaseStudy(element) {
+            element.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html>
